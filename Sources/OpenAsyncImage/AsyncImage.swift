@@ -67,14 +67,14 @@ import ImageIO
 ///     }
 ///     .frame(width: 50, height: 50)
 ///
-/// For this example, SwiftUI shows a ``ProgressView`` first, and then the
+/// For this example, SwiftUI shows a [ProgressView](https://developer.apple.com/documentation/swiftui/progressview) first, and then the
 /// image scaled to fit in the specified frame:
 ///
 /// ![A diagram that shows a progress view on the left, the SwiftUI icon on the
 /// right, and an arrow pointing from the first to the second.](AsyncImage-2)
 ///
 /// > Important: You can't apply image-specific modifiers, like
-/// ``Image/resizable(capInsets:resizingMode:)``, directly to an `AsyncImage`.
+/// [resizable(capInsets:resizingMode:)](https://developer.apple.com/documentation/swiftui/image/resizable(capinsets:resizingmode:)), directly to an `AsyncImage`.
 /// Instead, apply them to the ``Image`` instance that your `content`
 /// closure gets when defining the view's appearance.
 ///
@@ -144,7 +144,7 @@ public struct AsyncImage<Content>: View where Content : View {
     ///     AsyncImage(url: URL(string: "https://example.com/icon.png"))
     ///
     /// If you want to customize the placeholder or apply image-specific
-    /// modifiers --- like ``Image/resizable(capInsets:resizingMode:)`` ---
+    /// modifiers --- like [resizable(capInsets:resizingMode:)](https://developer.apple.com/documentation/swiftui/image/resizable(capinsets:resizingmode:)) ---
     /// to the loaded image, use the ``init(url:scale:content:placeholder:)``
     /// initializer instead.
     ///
@@ -349,7 +349,7 @@ public struct AsyncImage<Content>: View where Content : View {
             // loadingState.task = nil
             // loadingState.url = nil
             // loadingState.phase = .empty
-            // OpenSwiftUI optimized implementation:
+            // OpenAsyncImage optimized implementation:
             loadingState = LoadingState(phase: .empty)
         }
     }
@@ -367,7 +367,7 @@ public struct AsyncImage<Content>: View where Content : View {
         // SwiftUI iOS 18.0 implementation:
         // loadingState.task = task
         // loadingState.url = url
-        // OpenSwiftUI optimized implementation:
+        // OpenAsyncImage optimized implementation:
         loadingState = LoadingState(task: task, url: url, phase: loadingState.phase)
     }
 }
@@ -413,7 +413,7 @@ public enum AsyncImagePhase: Sendable {
     /// If this value isn't `nil`, the image load operation has finished,
     /// and you can use the image to update the view. You can use the image
     /// directly, or you can modify it in some way. For example, you can add
-    /// a ``Image/resizable(capInsets:resizingMode:)`` modifier to make the
+    /// a  [resizable(capInsets:resizingMode:) ](https://developer.apple.com/documentation/swiftui/image/resizable(capinsets:resizingmode:))  modifier to make the
     /// image resizable.
     public var image: Image? {
         guard case let .success(image) = self else {
