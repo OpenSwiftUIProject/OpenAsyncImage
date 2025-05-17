@@ -1,10 +1,10 @@
 # OpenAsyncImage
 
-A backport implementation of SwiftUI's AsyncImage for iOS 13+ and macOS 10.15+.
+A backport implementation of SwiftUI's AsyncImage on Apple platform.
 
 ## Overview
 
-OpenAsyncImage provides a drop-in replacement for SwiftUI's `AsyncImage` that works across all supported platforms, including iOS/iPadOS 13+, macOS 10.15+, tvOS 13+, and watchOS 6+.
+OpenAsyncImage provides a drop-in replacement for SwiftUI's `AsyncImage` that works across all supported platforms.
 
 This package's source code is mainly taken from [OpenSwiftUI](https://github.com/OpenSwiftUIProject/OpenSwiftUI).
 
@@ -33,11 +33,11 @@ Or add it directly in Xcode using File → Add Package Dependencies…
 
 ## Usage
 
-Simply import OpenAsyncImage and use it the same way you would use SwiftUI's AsyncImage:
+Simply import `OpenAsyncImageKit` and use it the same way you would use SwiftUI's AsyncImage:
 
 ```swift
 import SwiftUI
-import OpenAsyncImage
+import OpenAsyncImageKit
 
 struct ContentView: View {
     var body: some View {
@@ -105,5 +105,3 @@ To make AsyncImage available on earlier versions, code from the following librar
 ## License
 
 OpenAsyncImage is available under the MIT license. See the [LICENSE](LICENSE) file for more info.
-
-
