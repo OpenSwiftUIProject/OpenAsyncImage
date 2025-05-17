@@ -18,6 +18,15 @@ Add the following to your `Package.swift` file:
 dependencies: [
     .package(url: "https://github.com/OpenSwiftUIProject/OpenAsyncImage.git", from: "0.1.0")
 ]
+
+targets: [
+    .target(
+        name: "YourTarget",
+        dependencies: [
+            .product(name: "OpenAsyncImageKit", package: "OpenAsyncImage")
+        ]
+    )
+]
 ```
 
 Or add it directly in Xcode using File → Add Package Dependencies…

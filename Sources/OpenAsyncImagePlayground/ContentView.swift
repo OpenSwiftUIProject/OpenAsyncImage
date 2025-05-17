@@ -10,13 +10,15 @@ import OpenSwiftUI
 #else
 import SwiftUI
 #endif
-import OpenAsyncImage
+import OpenAsyncImageKit
 
 @available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)
-struct ContentView: View {
+public struct ContentView: View {
     private let url = URL(string: "https://picsum.photos/200")
 
-    var body: some View {
+    public init() {}
+
+    public var body: some View {
         NavigationStack {
             NavigationLink {
                 SwiftUI.AsyncImage(url: url)
