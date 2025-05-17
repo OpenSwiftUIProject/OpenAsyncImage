@@ -108,6 +108,10 @@ To make AsyncImage available on earlier versions, code from the following librar
 - [SwiftUIBackports](https://github.com/shaps80/SwiftUIBackports)
 - [AsyncCompatibilityKit](https://github.com/JohnSundell/AsyncCompatibilityKit)
 
+## Disclaimer
+
+The assets images used in this documentation are from Apple's documentation website and the property belongs to Apple Inc.
+
 ## License
 
 OpenAsyncImage is available under the MIT license. See the [LICENSE](LICENSE) file for more info.
