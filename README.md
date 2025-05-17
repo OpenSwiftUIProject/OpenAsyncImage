@@ -61,14 +61,14 @@ struct ContentView: View {
 ## Advantages
 
 - **iOS 13+ Support**: Brings AsyncImage functionality to earlier iOS versions instead of being limited to iOS 15+
-- **Optimized Implementation**: Provides an implementation equivalent to iOS 18.0 on all supported versions
+- **Optimized Implementation**: Provides an implementation based on iOS 18.0 with additional State.wrappedValue setter optimization
 - **Consistency**: Delivers consistent behavior across all supported platforms
 - **Debuggable**: Easy to debug and understand why something might not be working correctly
 
 ## Limitations
 
 - **No Future Optimizations**: Cannot automatically inherit future optimizations made to SwiftUI.AsyncImage with OS updates
-- **Missing Redaction Support**: `Image.redacted` is not implemented, so the placeholder effect in `AsyncImage(url:scale:)` is not fully equivalent to SwiftUI's implementation
+- **Missing Redaction Support**: `Image.redacted` can not be implemented by the public API of SwiftUI by now, so the placeholder effect in `AsyncImage(url:scale:)` is not fully equivalent to SwiftUI's implementation
 
 ## API Reference
 
