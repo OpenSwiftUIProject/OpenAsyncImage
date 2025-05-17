@@ -148,12 +148,20 @@ public struct AsyncImage<Content>: View where Content : View {
     /// to the loaded image, use the ``init(url:scale:content:placeholder:)``
     /// initializer instead.
     ///
+    /// > Warning: Due to limitations in SwiftUI's public API, `Image.redacted`
+    /// > cannot be fully implemented in this backport. As a result, the default
+    /// > placeholder effect in this initializer will appear different from SwiftUI's
+    /// > native implementation. For a more consistent appearance across platforms,
+    /// > consider using the `init(url:scale:content:placeholder:)` initializer
+    /// > with a custom placeholder instead.
+    ///
     /// - Parameters:
     ///   - url: The URL of the image to display.
     ///   - scale: The scale to use for the image. The default is `1`. Set a
     ///     different value when loading images designed for higher resolution
     ///     displays. For example, set a value of `2` for an image that you
     ///     would name with the `@2x` suffix if stored in a file on disk.
+    @available(*, deprecated, message: "Use `init(url:scale:transaction:content:)` or `init(url:scale:content:placeholder:) instead.")
     public init(url: URL?, scale: CGFloat = 1) where Content == Image {
         self.url = url
         self.scale = scale
