@@ -1,0 +1,15 @@
+{
+  "originHash" : "540014d10d6e38d408853139d7c56600b23e6662e1f34a3c25432ce565eaa34c",
+  "pins" : [
+    {
+      "identity" : "symbollocator",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/OpenSwiftUIProject/SymbolLocator.git",
+      "state" : {
+        "revision" : "546053c03f282df1a8270853da6692e1b078be09",
+        "version" : "0.2.1"
+      }
+    }
+  ],
+  "version" : 3
+}

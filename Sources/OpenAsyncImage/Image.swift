@@ -34,10 +34,21 @@
 import SwiftUI
 
 extension Image {
-    static let redacted: Image = {
-        // FIXME: Image.Resolved is not available in SwiftUI yet. Return a empty image for now.
-        Image("")
-    }()
+    @_silgen_name("OpenAsyncImage_Image_Redacted_ptr")
+    private static var redacted_18_ptr: UnsafeRawPointer?
+
+    private static var redacted_18: Image {
+        @_silgen_name("OpenAsyncImage_Image_Redacted")
+        get
+    }
+
+    static var redacted: Image? {
+        if redacted_18_ptr != nil {
+            redacted_18
+        } else {
+            nil
+        }
+    }
 }
 
 extension Image.Orientation {
